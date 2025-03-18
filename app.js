@@ -86,13 +86,3 @@ function limparLista() {
     atualizarLista(); // Atualiza a exibição da lista
     document.getElementById("resultado").innerHTML = ""; // Limpa o resultado do sorteio
 }
-
-// Adiciona um botão para limpar a lista com ícone de backspace
-document.addEventListener("DOMContentLoaded", function() {
-    let buttonContainer = document.querySelector(".button-container");
-    let botaoLimpar = document.createElement("button");
-    botaoLimpar.className = "button-draw";
-    botaoLimpar.innerHTML = '<img src="assets/backspace_icon.png" alt="Ícone de backspace" style="margin-right: 10px;"> Limpar Lista';
-    botaoLimpar.onclick = limparLista;
-    buttonContainer.appendChild(botaoLimpar);
-});

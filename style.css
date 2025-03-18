@@ -89,7 +89,10 @@ body {
 
 .button-container {
     width: 300px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 /* Estilos de entrada de texto */
@@ -113,6 +116,7 @@ button {
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .button-add {
@@ -142,21 +146,37 @@ ul {
     text-align: center;
 }
 
-/* Botão de sortear título */
-.button-draw {
+/* Botões de ação */
+.button-draw,
+.button-clear {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 10px 40px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 10px;
 }
 
-.button-draw img {
-    margin-right: 40px;
+.button-draw img,
+.button-clear img {
+    width: 20px;
+    height: 20px;
 }
 
-.button-draw:hover {
+.button-draw:hover,
+.button-clear:hover {
     background-color: var(--color-button-hover);
+}
+
+.button-draw:active,
+.button-clear:active {
+    transform: scale(0.95);
 }
